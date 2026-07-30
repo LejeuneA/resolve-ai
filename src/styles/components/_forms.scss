@@ -1,0 +1,66 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.field {
+  display: grid;
+  gap: $space-2;
+
+  &__label {
+    color: $color-text-muted;
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+
+  &__hint,
+  &__error {
+    font-size: 0.75rem;
+  }
+
+  &__hint {
+    color: $color-text-subtle;
+  }
+
+  &__error {
+    color: $color-danger;
+  }
+}
+
+.input,
+.textarea,
+.select {
+  width: 100%;
+  color: $color-text;
+  background: $color-bg-soft;
+  border: 1px solid $color-border;
+  border-radius: $radius-sm;
+  transition:
+    border-color $transition-fast,
+    background-color $transition-fast,
+    box-shadow $transition-fast;
+
+  &::placeholder {
+    color: $color-text-subtle;
+  }
+
+  &:hover:not(:disabled) {
+    border-color: $color-border-strong;
+  }
+
+  &:focus {
+    @include focus-ring;
+    border-color: $color-primary;
+    background: $color-surface;
+  }
+}
+
+.input,
+.select {
+  min-height: 42px;
+  padding: 0 $space-3;
+}
+
+.textarea {
+  min-height: 120px;
+  padding: $space-3;
+  resize: vertical;
+}

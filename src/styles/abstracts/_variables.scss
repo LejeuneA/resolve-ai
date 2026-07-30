@@ -1,0 +1,54 @@
+$font-family-base: "Inter", "Segoe UI", Arial, sans-serif;
+
+$color-bg: #0b1020;
+$color-bg-soft: #0f1528;
+$color-surface: #121a2f;
+$color-surface-elevated: #18213a;
+$color-surface-hover: #1e2947;
+
+$color-border: #293451;
+$color-border-strong: #3a4668;
+
+$color-text: #f5f7fb;
+$color-text-muted: #a6b0c6;
+$color-text-subtle: #74809c;
+
+$color-primary: #8b5cf6;
+$color-primary-hover: #7c3aed;
+$color-primary-soft: rgba(139, 92, 246, 0.16);
+
+$color-accent: #22d3ee;
+$color-success: #34d399;
+$color-warning: #fbbf24;
+$color-danger: #fb7185;
+$color-info: #60a5fa;
+
+$shadow-panel: 0 18px 45px rgba(0, 0, 0, 0.22);
+$shadow-focus: 0 0 0 3px rgba(139, 92, 246, 0.24);
+
+$radius-xs: 6px;
+$radius-sm: 10px;
+$radius-md: 14px;
+$radius-lg: 18px;
+$radius-pill: 999px;
+
+$space-1: 4px;
+$space-2: 8px;
+$space-3: 12px;
+$space-4: 16px;
+$space-5: 20px;
+$space-6: 24px;
+$space-7: 32px;
+$space-8: 40px;
+$space-9: 48px;
+
+$sidebar-width: 220px;
+$ticket-list-width: 340px;
+$assistant-panel-width: 360px;
+$topbar-height: 72px;
+
+$transition-fast: 140ms ease;
+$transition-base: 220ms ease;
+
+$breakpoint-tablet: 1100px;
+$breakpoint-mobile: 760px;

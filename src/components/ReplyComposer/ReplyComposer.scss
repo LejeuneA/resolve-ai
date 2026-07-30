@@ -1,0 +1,29 @@
+@use "../../styles/abstracts/variables" as *;
+
+.reply-composer {
+  padding: $space-4;
+  border-top: 1px solid $color-border;
+
+  &__textarea {
+    min-height: 112px;
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: $space-3;
+    margin-top: $space-3;
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: $space-2;
+  }
+
+  &__counter {
+    color: $color-text-subtle;
+    font-size: 0.75rem;
+  }
+}

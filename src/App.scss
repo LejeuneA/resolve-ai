@@ -1,0 +1,36 @@
+@use "./styles/abstracts/variables" as *;
+
+.app-shell {
+  display: grid;
+  grid-template-columns:
+    $sidebar-width
+    minmax(280px, $ticket-list-width)
+    minmax(420px, 1fr)
+    minmax(320px, $assistant-panel-width);
+  min-height: 100vh;
+  padding: $space-4;
+  gap: $space-4;
+
+  @media (max-width: $breakpoint-tablet) {
+    grid-template-columns: 88px minmax(280px, 340px) minmax(420px, 1fr);
+
+    .assistant-panel {
+      display: none;
+    }
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    grid-template-columns: 1fr;
+    padding: $space-2;
+
+    .sidebar,
+    .ticket-list {
+      display: none;
+    }
+  }
+}
+
+.workspace {
+  min-width: 0;
+  min-height: calc(100vh - #{$space-8});
+}

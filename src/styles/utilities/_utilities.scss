@@ -1,0 +1,25 @@
+@use "../abstracts/mixins" as *;
+
+.sr-only {
+  @include screen-reader-only;
+}
+
+.truncate {
+  @include text-truncate;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.stack {
+  display: grid;
+  gap: var(--stack-gap, 1rem);
+}
+
+.cluster {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--cluster-gap, 0.75rem);
+}

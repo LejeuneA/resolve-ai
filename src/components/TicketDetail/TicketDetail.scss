@@ -1,0 +1,70 @@
+@use "../../styles/abstracts/variables" as *;
+@use "../../styles/abstracts/mixins" as *;
+
+.ticket-detail {
+  @include panel;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: calc(100vh - #{$space-8});
+
+  &__header {
+    padding: $space-5;
+    border-bottom: 1px solid $color-border;
+  }
+
+  &__heading-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: $space-4;
+  }
+
+  &__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $space-2;
+    margin-top: $space-3;
+  }
+
+  &__conversation {
+    @include scrollbar;
+    display: grid;
+    align-content: start;
+    gap: $space-4;
+    padding: $space-5;
+    overflow-y: auto;
+  }
+}
+
+.message {
+  max-width: min(78%, 680px);
+  padding: $space-4;
+  background: $color-surface-elevated;
+  border: 1px solid $color-border;
+  border-radius: $radius-md;
+
+  &--agent {
+    justify-self: end;
+    background: $color-primary-soft;
+    border-color: rgba(139, 92, 246, 0.35);
+  }
+
+  &__meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: $space-3;
+    margin-bottom: $space-2;
+    color: $color-text-subtle;
+    font-size: 0.75rem;
+  }
+
+  &__author {
+    color: $color-text;
+    font-weight: 700;
+  }
+
+  &__body {
+    color: $color-text-muted;
+  }
+}
