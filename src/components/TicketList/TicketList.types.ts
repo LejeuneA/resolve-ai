@@ -1,4 +1,4 @@
-export type NavItem = {
+export type Ticket = {
     id: string
     customer: string
     subject: string

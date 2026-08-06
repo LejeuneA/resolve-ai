@@ -22,11 +22,15 @@ function TicketList() {
             <div className="ticket-list__items">
                 {tickets.map((ticket) => (
                     <button className="ticket-card" type="button" key={ticket.id} >
-                        {ticket.customer}
-                        {ticket.priority}
-                        {ticket.subject}
-                        {ticket.preview}
-                        {ticket.time}
+                        <div className="ticket-card__top">
+                            <span className="ticket-card__customer">{ticket.customer}</span>
+                            <span>{ticket.priority}</span>
+                        </div>
+                        <p className="ticket-card__subject">{ticket.subject}</p>
+                        <p className="ticket-card__preview">{ticket.preview}</p>
+                        <div className="ticket-card__meta">
+                            <span className="ticket-card__time">{ticket.time}</span>
+                        </div>
                     </button>
                 ))}
             </div>
