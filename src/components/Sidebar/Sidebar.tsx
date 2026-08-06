@@ -1,7 +1,7 @@
 import './Sidebar.scss'
+import type { NavItem } from './Sidebar.types'
 
-
-const navItems = [
+const navItems: NavItem[] = [
     {
         label: 'Inbox',
         isActive: true,
