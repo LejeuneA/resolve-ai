@@ -4,19 +4,19 @@ import type { NavItem } from './Sidebar.types'
 
 const navItems: NavItem[] = [
     {
-        id: '1',
+        id: 'inbox',
         label: 'Inbox',
     },
     {
-        id: '2',
+        id: 'all-tickets',
         label: 'All tickets',
     },
     {
-        id: '3',
+        id: 'analytics',
         label: 'Analytics',
     },
     {
-        id: '4',
+        id: 'settings',
         label: 'Settings',
     },
 ]
@@ -37,7 +37,7 @@ function Sidebar() {
                         item.id === activeItemId
                             ? 'sidebar__link sidebar__link--active'
                             : 'sidebar__link'
-                    } type="button" key={item.label} onClick={() => setActiveItemId(item.id)}>{item.label}
+                    } type="button" key={item.id} onClick={() => setActiveItemId(item.id)}>{item.label}
                     </button>
                 ))}
             </nav>
