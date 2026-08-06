@@ -1,26 +1,29 @@
+import { useState } from 'react'
 import './Sidebar.scss'
 import type { NavItem } from './Sidebar.types'
 
 const navItems: NavItem[] = [
     {
+        id: '1',
         label: 'Inbox',
-        isActive: true,
     },
     {
+        id: '2',
         label: 'All tickets',
-        isActive: false,
     },
     {
+        id: '3',
         label: 'Analytics',
-        isActive: false,
     },
     {
+        id: '4',
         label: 'Settings',
-        isActive: false,
     },
 ]
 
 function Sidebar() {
+    const [activeItemId, setActiveItemId] = useState('inbox')
+
     return (
         <aside className="sidebar">
             <div className="sidebar__brand">
@@ -31,10 +34,10 @@ function Sidebar() {
             <nav className="sidebar__nav" aria-label="Primary navigation">
                 {navItems.map((item) => (
                     <button className={
-                        item.isActive
+                        item.id === activeItemId
                             ? 'sidebar__link sidebar__link--active'
                             : 'sidebar__link'
-                    } type="button" key={item.label}>{item.label}
+                    } type="button" key={item.label} onClick={() => setActiveItemId(item.id)}>{item.label}
                     </button>
                 ))}
             </nav>
