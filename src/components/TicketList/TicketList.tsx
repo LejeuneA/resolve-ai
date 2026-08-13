@@ -1,5 +1,6 @@
 import './TicketList.scss'
 import type { Ticket } from './TicketList.types'
+import { useState } from 'react'
 
 const tickets: Ticket[] = [
     {
@@ -28,6 +29,8 @@ const tickets: Ticket[] = [
     },
 ]
 function TicketList() {
+    const [activeTicketId, setActiveTicketId] = useState('ticket-001')
+
     return (
         <section className="ticket-list">
             <header className="ticket-list__header">
@@ -37,7 +40,16 @@ function TicketList() {
 
             <div className="ticket-list__items">
                 {tickets.map((ticket) => (
-                    <button className="ticket-card" type="button" key={ticket.id} >
+                    <button
+                        className={
+                            ticket.id === activeTicketId
+                                ? 'ticket-card ticket-card--active'
+                                : 'ticket-card'
+                        }
+                        type="button"
+                        key={ticket.id}
+                        onClick={() => setActiveTicketId(ticket.id)}
+                    >
                         <div className="ticket-card__top">
                             <span className="ticket-card__customer">{ticket.customer}</span>
                             <span>{ticket.priority}</span>
@@ -50,7 +62,7 @@ function TicketList() {
                     </button>
                 ))}
             </div>
-        </section>
+        </section >
     )
 }
 
