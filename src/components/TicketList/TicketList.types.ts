@@ -6,3 +6,9 @@ export type Ticket = {
     time: string
     priority: 'low' | 'medium' | 'high'
 }
+
+
+export type TicketListProps = {
+    selectedTicketId: string
+    onSelectTicket: (ticketId: string) => void
+}

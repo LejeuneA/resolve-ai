@@ -1,10 +1,9 @@
 import './TicketList.scss'
 import { useState } from 'react'
-import '../../data/tickets'
+import { tickets } from '../../data/tickets'
 
 
-function TicketList() {
-    const [activeTicketId, setActiveTicketId] = useState('ticket-001')
+function TicketList({ selectedTicketId, onSelectTicket }: TicketListProps) {
 
     return (
         <section className="ticket-list">
@@ -17,13 +16,13 @@ function TicketList() {
                 {tickets.map((ticket) => (
                     <button
                         className={
-                            ticket.id === activeTicketId
+                            ticket.id === selectedTicketId
                                 ? 'ticket-card ticket-card--active'
                                 : 'ticket-card'
                         }
                         type="button"
                         key={ticket.id}
-                        onClick={() => setActiveTicketId(ticket.id)}
+                        onClick={() => onSelectTicket(ticket.id)(ticket.id)}
                     >
                         <div className="ticket-card__top">
                             <span className="ticket-card__customer">{ticket.customer}</span>
