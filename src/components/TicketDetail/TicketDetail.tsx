@@ -1,6 +1,5 @@
 import './TicketDetail.scss'
 import type { Ticket } from '../TicketList/TicketList.types'
-import { useState } from 'react'
 
 type TicketDetailProps = {
     ticket: Ticket
@@ -9,20 +8,22 @@ type TicketDetailProps = {
 
 function TicketDetail({ ticket }: TicketDetailProps) {
     return (
-        <section className="ticket-details">
-            <header className='ticket-detail_heading-row'>
-                <div className='ticket-detail_heading-row'>
+        <section className="ticket-detail">
+            <header className="ticket-detail__header">
+                <div className="ticket-detail__heading-row">
                     <h2>{ticket.subject}</h2>
                     <span>{ticket.priority}</span>
                 </div>
-                <div className='ticket-detail_meta'>
+
+                <div className="ticket-detail__meta">
                     <span>{ticket.customer}</span>
                     <span>{ticket.time}</span>
                 </div>
-                <div className='ticket-detail_conversation'>
-                    <p>{ticket.preview}</p>
-                </div>
             </header>
+
+            <div className="ticket-detail__conversation">
+                <p>{ticket.preview}</p>
+            </div>
         </section>
     )
 }

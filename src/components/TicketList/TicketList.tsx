@@ -1,6 +1,6 @@
 import './TicketList.scss'
-import { useState } from 'react'
 import { tickets } from '../../data/tickets'
+import type { TicketListProps } from './TicketList.types'
 
 
 function TicketList({ selectedTicketId, onSelectTicket }: TicketListProps) {
@@ -22,7 +22,7 @@ function TicketList({ selectedTicketId, onSelectTicket }: TicketListProps) {
                         }
                         type="button"
                         key={ticket.id}
-                        onClick={() => onSelectTicket(ticket.id)(ticket.id)}
+                        onClick={() => onSelectTicket(ticket.id)}
                     >
                         <div className="ticket-card__top">
                             <span className="ticket-card__customer">{ticket.customer}</span>
