@@ -37,6 +37,7 @@ function TicketDetail({ ticket }: TicketDetailProps) {
                     )
                 }
             </div>
+            <ReplyComposer />
         </section>
     )
 }
