@@ -6,7 +6,9 @@ function ReplyComposer() {
     const [reply, setReply] = useState('')
 
     return (
-        <textarea className="reply-composer__textarea" value={reply} onChange={(event) => setReply(event.target.value)}></textarea>
+        <form className="reply-composer">
+            <textarea className="reply-composer__textarea" value={reply} onChange={(event) => setReply(event.target.value)}></textarea>
+        </form>
     )
 }
 
