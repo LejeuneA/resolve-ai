@@ -11,6 +11,10 @@ function ReplyComposer() {
 
     function handleSubmit(event: SubmitEvent<HTMLFormElement>) {
         event.preventDefault()
+
+        if (reply.trim().length === 0) {
+            return
+        }
     }
 
     return (
