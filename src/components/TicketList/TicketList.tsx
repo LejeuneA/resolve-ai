@@ -39,26 +39,7 @@ function TicketList({ selectedTicketId, onSelectTicket }: TicketListProps) {
                             </span>
                         </div>
                         <p className="ticket-card__subject">{ticket.subject}</p>
-                        <p className="ticket-card__preview">
-                            {ticket.messages.map((ticket) =>
-                                <div key={ticket.id}>
-                                    <div className='message'>
-                                        <div className='message__meta'>
-                                            <div
-                                                className={
-                                                    ticket.role === 'customer'
-                                                        ? 'message'
-                                                        : ticket.role === 'agent'
-                                                            ? 'message message--agent'
-                                                }>
-                                                {ticket.author}
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className='message__body'>{ticket.body}</div>
-                                    <div>{ticket.time}</div>
-                                </div>)}
-                        </p>
+                        <p className="ticket-card__preview">{ticket.preview}</p>
                         <div className="ticket-card__meta">
                             <span className="ticket-card__time">{ticket.time}</span>
                         </div>

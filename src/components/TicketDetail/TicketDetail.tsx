@@ -22,7 +22,27 @@ function TicketDetail({ ticket }: TicketDetailProps) {
             </header>
 
             <div className="ticket-detail__conversation">
-                <p>{ticket.preview}</p>
+                <p>
+                    {
+                        ticket.messages.map((message) =>
+                            <span key={message.id}>
+                                <span className='message'>
+                                    <span className='message__meta'>
+                                        <span
+                                            className={
+                                                message.role === 'customer'
+                                                    ? 'message'
+                                                    : 'message message--agent'
+                                            }>
+                                            {message.author}
+                                        </span>
+                                        <span>{message.time}</span>
+                                    </span>
+                                    <span className='message__body'>{message.body}</span>
+                                </span>
+                            </span>)
+                    }
+                </p>
             </div>
         </section>
     )
