@@ -16,6 +16,7 @@ function ReplyComposer() {
     return (
         <form className="reply-composer" onSubmit={handleSubmit}>
             <textarea className="reply-composer__textarea" value={reply} onChange={(event) => setReply(event.target.value)}></textarea>
+            <button type='Send reply'>Send</button>
         </form>
     )
 }
