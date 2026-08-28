@@ -1,3 +1,3 @@
-export type TicketListProps = {
+export type ReplyComposerProps = {
     onSubmitReply: (reply: string) => void
 }
