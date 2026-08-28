@@ -3,7 +3,7 @@ import { useState } from 'react'
 
 
 function ReplyComposer() {
-    const [reply, setName] = useState('')
+    const [reply, setReply] = useState('')
 
     return (
         <div>Reply composer</div>
