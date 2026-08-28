@@ -22,27 +22,24 @@ function TicketDetail({ ticket }: TicketDetailProps) {
             </header>
 
             <div className="ticket-detail__conversation">
-                <p>
-                    {
-                        ticket.messages.map((message) =>
-                            <span key={message.id}>
-                                <span className='message'>
-                                    <span className='message__meta'>
-                                        <span
-                                            className={
-                                                message.role === 'customer'
-                                                    ? 'message'
-                                                    : 'message message--agent'
-                                            }>
-                                            {message.author}
-                                        </span>
-                                        <span>{message.time}</span>
-                                    </span>
-                                    <span className='message__body'>{message.body}</span>
+                {
+                    ticket.messages.map((message) =>
+                        <span className='message' key={message.id}>
+                            <span className='message__meta'>
+                                <span className='message__author'>{message.author}</span>
+                                <span>{message.time}</span>
+                                <span
+                                    className={
+                                        message.role === 'customer'
+                                            ? 'message'
+                                            : 'message message--agent'
+                                    }>
                                 </span>
-                            </span>)
-                    }
-                </p>
+                            </span>
+                            <span className='message__body'>{message.body}</span>
+                        </span>
+                    )
+                }
             </div>
         </section>
     )
