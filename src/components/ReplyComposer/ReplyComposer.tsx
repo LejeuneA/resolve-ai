@@ -1,5 +1,6 @@
 import './ReplyComposer.scss'
 import { useState } from 'react'
+import type { SubmitEvent } from 'react'
 
 
 
