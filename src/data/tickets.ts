@@ -13,14 +13,14 @@ export const tickets: Ticket[] = [
                 id: 'msg-001',
                 author: 'Emma Wilson',
                 time: '12 min ago',
-                body: 'I was charged twice for my subscription.Could you please refund the duplicate payment?',
+                body: 'I was charged twice for my subscription. Could you please refund the duplicate payment?',
                 role: 'customer'
             },
             {
                 id: 'msg-002',
                 author: 'Support Agent',
                 time: '10 min ago',
-                body: 'Of course.I’ll check the duplicate charge and help you with the refund.',
+                body: 'Of course. I’ll check the duplicate charge and help you with the refund.',
                 role: 'agent'
             },
         ]
@@ -67,7 +67,7 @@ export const tickets: Ticket[] = [
             {
                 id: 'msg-006',
                 author: 'Support Agent',
-                time: '10 min ago',
+                time: '55 min ago',
                 body: 'Yes. I’ll show you where to find the PDF export option.',
                 role: 'agent'
             },
