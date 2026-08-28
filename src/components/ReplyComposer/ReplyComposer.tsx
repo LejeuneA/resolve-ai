@@ -8,7 +8,7 @@ import type { ReplyComposerProps } from './ReplyComposer.types'
 
 
 
-function ReplyComposer() {
+function ReplyComposer({ onSubmitReply }: ReplyComposerProps) {
     const [reply, setReply] = useState('')
 
     function handleSubmit(event: SubmitEvent<HTMLFormElement>) {
