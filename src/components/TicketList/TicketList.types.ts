@@ -5,7 +5,7 @@ export type Ticket = {
     preview: string
     time: string
     priority: 'low' | 'medium' | 'high'
-    message: Message[]
+    messages: Message[]
 }
 
 
