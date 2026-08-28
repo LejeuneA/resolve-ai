@@ -24,17 +24,13 @@ function TicketDetail({ ticket }: TicketDetailProps) {
             <div className="ticket-detail__conversation">
                 {
                     ticket.messages.map((message) =>
-                        <span className='message' key={message.id}>
+                        <span key={message.id}
+                            className={message.role === 'customer'
+                                ? 'message'
+                                : 'message message--agent'} >
                             <span className='message__meta'>
                                 <span className='message__author'>{message.author}</span>
                                 <span>{message.time}</span>
-                                <span
-                                    className={
-                                        message.role === 'customer'
-                                            ? 'message'
-                                            : 'message message--agent'
-                                    }>
-                                </span>
                             </span>
                             <span className='message__body'>{message.body}</span>
                         </span>
