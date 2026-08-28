@@ -9,3 +9,6 @@ function ReplyComposer() {
         <div>Reply composer</div>
     )
 }
+
+
+export default ReplyComposer
