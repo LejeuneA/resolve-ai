@@ -5,25 +5,42 @@
   border-top: 1px solid $color-border;
 
   &__textarea {
+    width: 100%;
     min-height: 112px;
+    padding: $space-3;
+    color: $color-text;
+    background: $color-bg-soft;
+    border: 1px solid $color-border;
+    border-radius: $radius-sm;
+    resize: vertical;
+    outline: none;
+    font: inherit;
+
+    &:focus {
+      border-color: $color-primary;
+      box-shadow: $shadow-focus;
+    }
   }
 
   &__footer {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: $space-3;
+    justify-content: flex-end;
     margin-top: $space-3;
-  }
 
-  &__actions {
-    display: flex;
-    align-items: center;
-    gap: $space-2;
-  }
+    button {
+      padding: $space-2 $space-4;
+      color: $color-text;
+      background: $color-primary;
+      border: 0;
+      border-radius: $radius-sm;
+      cursor: pointer;
+      font: inherit;
+      font-weight: 700;
+      transition: background-color $transition-fast;
 
-  &__counter {
-    color: $color-text-subtle;
-    font-size: 0.75rem;
+      &:hover {
+        background: $color-primary-hover;
+      }
+    }
   }
 }
