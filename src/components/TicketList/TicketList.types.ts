@@ -12,6 +12,7 @@ export type Ticket = {
 export type TicketListProps = {
     selectedTicketId: string
     onSelectTicket: (ticketId: string) => void
+    onSubmitReply: (reply: string) => void
 }
 
 
