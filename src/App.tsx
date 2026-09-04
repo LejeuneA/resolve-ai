@@ -11,8 +11,7 @@ function App() {
     const selectedTicket =
         tickets.find((ticket) => ticket.id === selectedTicketId) ?? tickets[0]
 
-    function handleSubmitReply() {
-        const reply = ''
+    function handleSubmitReply(reply: string) {
         console.log(reply)
     }
 
