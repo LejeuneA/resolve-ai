@@ -28,7 +28,7 @@ function App() {
     setTicketData((currentTickets) =>
       currentTickets.map((ticket) => ticket.id === selectedTicketId ? {
         ...ticket,
-        messages: [newMessage]
+        messages: [...ticket.messages, newMessage]
       }
         : ticket
       )
