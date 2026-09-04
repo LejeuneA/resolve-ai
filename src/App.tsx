@@ -42,7 +42,7 @@ function App() {
       <TicketList
         selectedTicketId={selectedTicketId}
         onSelectTicket={setSelectedTicketId}
-        tickets={[]}
+        tickets={ticketData}
       />
       <TicketDetail ticket={selectedTicket} onSubmitReply={handleSubmitReply} />
 
