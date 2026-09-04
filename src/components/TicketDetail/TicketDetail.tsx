@@ -4,7 +4,7 @@ import type { TicketDetailProps } from './TicketDetail.types'
 
 
 
-function TicketDetail({ ticket }: TicketDetailProps) {
+function TicketDetail({ ticket, onSubmitReply }: TicketDetailProps) {
     return (
         <section className="ticket-detail">
             <header className="ticket-detail__header">
@@ -35,7 +35,7 @@ function TicketDetail({ ticket }: TicketDetailProps) {
                     )
                 }
             </div>
-            <ReplyComposer />
+            <ReplyComposer onSubmitReply={onSubmitReply} />
         </section>
     )
 }
