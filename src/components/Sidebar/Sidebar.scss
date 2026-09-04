@@ -1,70 +1,71 @@
 @use "../../styles/abstracts/variables" as *;
 
 .sidebar {
-  display: flex;
-  flex-direction: column;
-  min-height: calc(100vh - #{$space-8});
-  padding: $space-5 $space-3;
-  background: $color-bg-soft;
-  border: 1px solid $color-border;
-  border-radius: $radius-lg;
-
-  &__brand {
     display: flex;
-    align-items: center;
-    gap: $space-3;
-    padding: 0 $space-2 $space-6;
-  }
+    flex-direction: column;
+    min-height: calc(100vh - #{$space-8});
+    padding: $space-5 $space-3;
+    background: $color-bg-soft;
+    border: 1px solid $color-border;
+    border-radius: $radius-lg;
 
-  &__logo {
-    display: grid;
-    place-items: center;
-    width: 40px;
-    height: 40px;
-    background: $color-primary;
-    border-radius: $radius-sm;
-    font-weight: 800;
-  }
-
-  &__title {
-    font-weight: 700;
-  }
-
-  &__subtitle {
-    color: $color-text-subtle;
-    font-size: 0.75rem;
-  }
-
-  &__nav {
-    display: grid;
-    gap: $space-1;
-  }
-
-  &__link {
-    display: flex;
-    align-items: center;
-    gap: $space-3;
-    min-height: 44px;
-    padding: 0 $space-3;
-    color: $color-text-muted;
-    border-radius: $radius-sm;
-    transition:
-      color $transition-fast,
-      background-color $transition-fast;
-
-    &:hover,
-    &--active {
-      color: $color-text;
-      background: $color-primary-soft;
+    &__brand {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: $space-1;
+        padding: 0 $space-2 $space-6;
     }
 
-    &--active {
-      font-weight: 700;
+    &__logo {
+        display: grid;
+        place-items: center;
+        width: 40px;
+        height: 40px;
+        background: $color-primary;
+        border-radius: $radius-sm;
+        font-weight: 800;
     }
-  }
 
-  &__footer {
-    margin-top: auto;
-    padding-top: $space-5;
-  }
+    &__title {
+        font-weight: 700;
+    }
+
+    &__subtitle {
+        color: $color-text-subtle;
+        font-size: 0.75rem;
+    }
+
+    &__nav {
+        display: grid;
+        gap: $space-1;
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        gap: $space-3;
+        min-height: 44px;
+        padding: 0 $space-3;
+        color: $color-text-muted;
+        border-radius: $radius-sm;
+        transition:
+            color $transition-fast,
+            background-color $transition-fast;
+
+        &:hover,
+        &--active {
+            color: $color-text;
+            background: $color-primary-soft;
+        }
+
+        &--active {
+            font-weight: 700;
+        }
+    }
+
+    &__footer {
+        margin-top: auto;
+        padding-top: $space-5;
+    }
 }
