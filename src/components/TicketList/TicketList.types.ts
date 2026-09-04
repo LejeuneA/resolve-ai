@@ -6,13 +6,13 @@ export type Ticket = {
   time: string
   priority: 'low' | 'medium' | 'high'
   messages: Message[]
-  ticket: Ticket[]
 }
 
 
 export type TicketListProps = {
   selectedTicketId: string
   onSelectTicket: (ticketId: string) => void
+  ticket: Ticket[]
 }
 
 
