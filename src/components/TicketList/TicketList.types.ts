@@ -12,7 +12,7 @@ export type Ticket = {
 export type TicketListProps = {
   selectedTicketId: string
   onSelectTicket: (ticketId: string) => void
-  ticket: Ticket[]
+  tickets: Ticket[]
 }
 
 
