@@ -9,11 +9,11 @@ import type { Ticket } from './components/TicketList/TicketList.types'
 function App() {
   const [selectedTicketId, setSelectedTicketId] = useState('ticket-001')
 
-  const [ticketdata, setTicketData] = useState<Ticket[]>([])
+  const [ticketData, setTicketData] = useState<Ticket[]>([...tickets])
 
 
   const selectedTicket =
-    ticketdata.find((ticket) => ticket.id === selectedTicketId) ?? tickets[0]
+    ticketData.find((ticket) => ticket.id === selectedTicketId) ?? ticketData[0]
 
   function handleSubmitReply(reply: string) {
     console.log(reply)
