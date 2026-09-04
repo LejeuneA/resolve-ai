@@ -17,6 +17,8 @@ function ReplyComposer({ onSubmitReply }: ReplyComposerProps) {
         if (reply.trim().length === 0) {
             return
         }
+
+        onSubmitReply(reply.trim())
     }
 
     return (
