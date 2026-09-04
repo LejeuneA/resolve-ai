@@ -1,5 +1,4 @@
 import './TicketDetail.scss'
-import type { Ticket } from '../TicketList/TicketList.types'
 import ReplyComposer from '../ReplyComposer/ReplyComposer'
 import type { TicketDetailProps } from './TicketDetail.types'
 
