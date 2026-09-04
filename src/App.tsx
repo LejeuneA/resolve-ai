@@ -19,7 +19,7 @@ function App() {
     const newMessage: Message = {
       id: 'msg-new',
       author: 'Support Agent',
-      body: 'reply',
+      body: reply,
       time: 'Just now',
       role: 'agent'
     }
@@ -28,7 +28,7 @@ function App() {
     setTicketData((currentTickets) =>
       currentTickets.map((ticket) => ticket.id === selectedTicketId ? {
         ...ticket,
-        message: newMessage
+        messages: [newMessage]
       }
         : ticket
       )

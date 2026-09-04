@@ -5,10 +5,6 @@ import type { ReplyComposerProps } from './ReplyComposer.types'
 
 
 
-
-
-
-
 function ReplyComposer({ onSubmitReply }: ReplyComposerProps) {
   const [reply, setReply] = useState('')
 
@@ -22,7 +18,6 @@ function ReplyComposer({ onSubmitReply }: ReplyComposerProps) {
     onSubmitReply(reply.trim())
     setReply('')
   }
-
 
   return (
     <form className="reply-composer" onSubmit={handleSubmit}>
