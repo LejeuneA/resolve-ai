@@ -6,6 +6,7 @@ export type Ticket = {
   time: string
   priority: 'low' | 'medium' | 'high'
   messages: Message[]
+  ticket: Ticket[]
 }
 
 
