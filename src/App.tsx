@@ -11,6 +11,11 @@ function App() {
     const selectedTicket =
         tickets.find((ticket) => ticket.id === selectedTicketId) ?? tickets[0]
 
+    function handleSubmitReply() {
+        const reply = ''
+        console.log(reply)
+    }
+
     return (
 
         <main className="app-shell">
@@ -19,7 +24,7 @@ function App() {
                 selectedTicketId={selectedTicketId}
                 onSelectTicket={setSelectedTicketId}
             />
-            <TicketDetail ticket={selectedTicket} />
+            <TicketDetail ticket={selectedTicket} onSubmitReply={handleSubmitReply} />
 
 
         </main>
