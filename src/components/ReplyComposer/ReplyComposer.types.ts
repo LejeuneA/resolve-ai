@@ -1,3 +1,3 @@
 export type ReplyComposerProps = {
-    onSubmitReply: (reply: string) => void
+  onSubmitReply: (reply: string) => void
 }

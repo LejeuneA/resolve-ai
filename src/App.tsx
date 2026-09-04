@@ -6,28 +6,28 @@ import TicketDetail from './components/TicketDetail/TicketDetail'
 import { tickets } from './data/tickets'
 
 function App() {
-    const [selectedTicketId, setSelectedTicketId] = useState('ticket-001')
+  const [selectedTicketId, setSelectedTicketId] = useState('ticket-001')
 
-    const selectedTicket =
-        tickets.find((ticket) => ticket.id === selectedTicketId) ?? tickets[0]
+  const selectedTicket =
+    tickets.find((ticket) => ticket.id === selectedTicketId) ?? tickets[0]
 
-    function handleSubmitReply(reply: string) {
-        console.log(reply)
-    }
+  function handleSubmitReply(reply: string) {
+    console.log(reply)
+  }
 
-    return (
+  return (
 
-        <main className="app-shell">
-            <Sidebar />
-            <TicketList
-                selectedTicketId={selectedTicketId}
-                onSelectTicket={setSelectedTicketId}
-            />
-            <TicketDetail ticket={selectedTicket} onSubmitReply={handleSubmitReply} />
+    <main className="app-shell">
+      <Sidebar />
+      <TicketList
+        selectedTicketId={selectedTicketId}
+        onSelectTicket={setSelectedTicketId}
+      />
+      <TicketDetail ticket={selectedTicket} onSubmitReply={handleSubmitReply} />
 
 
-        </main>
-    )
+    </main>
+  )
 }
 
 export default App

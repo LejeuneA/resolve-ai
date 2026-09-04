@@ -2,97 +2,97 @@
 @use "../../styles/abstracts/mixins" as *;
 
 .ticket-list {
-    @include panel;
-    display: flex;
-    flex-direction: column;
-    min-height: calc(100vh - #{$space-8});
+  @include panel;
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - #{$space-8});
 
-    &__header {
-        padding: $space-5;
-        border-bottom: 1px solid $color-border;
-    }
+  &__header {
+    padding: $space-5;
+    border-bottom: 1px solid $color-border;
+  }
 
-    &__toolbar {
-        display: grid;
-        gap: $space-3;
-        margin-top: $space-4;
-    }
+  &__toolbar {
+    display: grid;
+    gap: $space-3;
+    margin-top: $space-4;
+  }
 
-    &__items {
-        @include scrollbar;
-        display: grid;
-        align-content: start;
-        gap: $space-3;
-        padding: $space-3;
-        overflow-y: auto;
-    }
+  &__items {
+    @include scrollbar;
+    display: grid;
+    align-content: start;
+    gap: $space-3;
+    padding: $space-3;
+    overflow-y: auto;
+  }
 }
 
 .ticket-card {
-    width: 100%;
-    text-align: left;
-    color: inherit;
-    padding: $space-4;
-    background: $color-bg-soft;
-    border: 1px solid transparent;
-    border-color: rgba($color-border-strong, 0.45);
-    border-radius: $radius-md;
-    cursor: pointer;
-    transition:
-        background-color $transition-fast,
-        border-color $transition-fast,
-        transform $transition-fast;
+  width: 100%;
+  text-align: left;
+  color: inherit;
+  padding: $space-4;
+  background: $color-bg-soft;
+  border: 1px solid transparent;
+  border-color: rgba($color-border-strong, 0.45);
+  border-radius: $radius-md;
+  cursor: pointer;
+  transition:
+    background-color $transition-fast,
+    border-color $transition-fast,
+    transform $transition-fast;
 
-    &:hover {
-        background: $color-surface-elevated;
-        border-color: $color-border-strong;
-        transform: translateY(-1px);
-    }
+  &:hover {
+    background: $color-surface-elevated;
+    border-color: $color-border-strong;
+    transform: translateY(-1px);
+  }
 
-    &--active {
-        background: $color-primary-soft;
-        border-color: rgba(139, 92, 246, 0.42);
-    }
+  &--active {
+    background: $color-primary-soft;
+    border-color: rgba(139, 92, 246, 0.42);
+  }
 
-    &__top,
-    &__meta {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: $space-3;
-    }
+  &__top,
+  &__meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: $space-3;
+  }
 
-    &__customer,
-    &__subject {
-        @include text-truncate;
-    }
+  &__customer,
+  &__subject {
+    @include text-truncate;
+  }
 
-    &__customer {
-        font-weight: 700;
-    }
+  &__customer {
+    font-weight: 700;
+  }
 
-    &__subject {
-        margin-top: $space-2;
-        color: $color-text-muted;
-        font-size: 0.875rem;
-    }
+  &__subject {
+    margin-top: $space-2;
+    color: $color-text-muted;
+    font-size: 0.875rem;
+  }
 
-    &__preview {
-        display: -webkit-box;
-        margin-top: $space-2;
-        overflow: hidden;
-        color: $color-text-subtle;
-        font-size: 0.8125rem;
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp: 2;
-    }
+  &__preview {
+    display: -webkit-box;
+    margin-top: $space-2;
+    overflow: hidden;
+    color: $color-text-subtle;
+    font-size: 0.8125rem;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
 
-    &__meta {
-        margin-top: $space-3;
-    }
+  &__meta {
+    margin-top: $space-3;
+  }
 
-    &__time {
-        color: $color-text-subtle;
-        font-size: 0.75rem;
-    }
+  &__time {
+    color: $color-text-subtle;
+    font-size: 0.75rem;
+  }
 }
